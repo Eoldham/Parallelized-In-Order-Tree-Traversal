@@ -2,7 +2,7 @@
 #SBATCH -A see200002p      		        # specify the project or allocation number
 #SBATCH -p RM-shared 			            # RM-shared partition
 #SBATCH -J myjob                	    # Job name
-#SBATCH --mail-user=owlanne@udel.edu
+#SBATCH --mail-user=<userName>        # Insert Username here
 #SBATCH --mail-type=ALL
 
 #SBATCH -N 1                    	    # Number of nodes, not cores (16 cores/node)
