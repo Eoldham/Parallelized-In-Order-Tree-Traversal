@@ -42,8 +42,6 @@ Node* insert(Node* node, int data)
 // Iterative function to perform inorder traversal on the tree
 void inorderIterative(Node* root)
 {
-    double time_start = getClock();
-
     // create an empty stack
     stack<Node*> stack;
 
@@ -70,10 +68,6 @@ void inorderIterative(Node* root)
             curr = curr->right;
         }
     }
-
-    double time_finish = getClock();
-
-    printf("time (s)= %.6f\n", time_finish - time_start);
 }
 
 
@@ -104,7 +98,11 @@ int main()
     }
     **/
 
+    double time_start = getClock();
     inorderIterative(root);
+    double time_finish = getClock();
+
+    printf("time (s)= %.6f\n", time_finish - time_start);
 
     return 0;
 }
