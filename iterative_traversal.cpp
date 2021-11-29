@@ -63,7 +63,7 @@ void inorderIterative(Node* root)
             // print it, and finally set the current node to its right child
             curr = stack.top();
             stack.pop();
-           // cout << curr->data << " ";
+            cout << curr->data << " ";
 
             curr = curr->right;
         }
@@ -78,7 +78,7 @@ int main()
 
     Node* root = new Node(1);
 
-
+   
    //Height = 15
     for (int x = 2; x <= 32767; x++){
         insert(root,x);
@@ -106,4 +106,3 @@ int main()
 
     return 0;
 }
-

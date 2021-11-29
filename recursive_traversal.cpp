@@ -49,6 +49,9 @@ void inorder(Node* root)
     // Traverse the left subtree
     inorder(root->left);
  
+    // Display the data part of the root (or current node)
+    cout << root->data << " ";
+ 
     // Traverse the right subtree
     inorder(root->right);
 }
@@ -58,25 +61,26 @@ int main()
 
     Node* root = new Node(1);
 
-
+/**
    //Height = 15
     for (int x = 2; x <= 32767; x++){
         insert(root,x);
     }
-
-    /**
+**/
+/**   
     //Height = 10
     for (int x = 2; x <= 1023; x++){
         insert(root,x);
     }
-    **/
+  **/ 
 
-    /**
+    
     //Height = 5
     for (int x = 2; x <= 31; x++){
         insert(root,x);
     }
-    **/
+    
+   
     double time_start = getClock();
     inorder(root);
     double time_finish = getClock();
