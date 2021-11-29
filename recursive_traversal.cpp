@@ -2,6 +2,9 @@
 
 #include <iostream>
 #include <stack>
+#include <time.h>
+#define getClock() ((double)clock() / CLOCKS_PER_SEC)
+
 using namespace std;
 
 // Data structure to store a binary tree node
@@ -77,8 +80,11 @@ int main()
         insert(root,x);
     }
     **/
-
+    double time_start = getClock();
     inorderIterative(root);
+    double time_finish = getClock();
+
+    printf("time (s)= %.6f\n", time_finish - time_start);
 
     return 0;
 }
