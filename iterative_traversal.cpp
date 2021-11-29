@@ -1,31 +1,49 @@
-#Code From: https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/
+//Code From: https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/
 
 #include <iostream>
 #include <stack>
 using namespace std;
- 
+
 // Data structure to store a binary tree node
 struct Node
 {
     int data;
     Node *left, *right;
- 
+
     Node(int data)
     {
         this->data = data;
         this->left = this->right = nullptr;
     }
 };
+
+//Code from: https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
+Node* insert(Node* node, int data)
+{
+    /* If the tree is empty, return a new node */
+    if (node == nullptr)
+        return new Node(data);
+
+    /* Otherwise, recur down the tree */
+    if (data < node->data)
+        node->left = insert(node->left, data);
+    else if (data > node->data)
+        node->right = insert(node->right, data);
+
+    /* return the (unchanged) node pointer */
+    return node;
+}
+
  
 // Iterative function to perform inorder traversal on the tree
 void inorderIterative(Node* root)
 {
     // create an empty stack
     stack<Node*> stack;
- 
+
     // start from the root node (set current node to the root node)
     Node* curr = root;
- 
+
     // if the current node is null and the stack is also empty, we are done
     while (!stack.empty() || curr != nullptr)
     {
@@ -42,37 +60,41 @@ void inorderIterative(Node* root)
             curr = stack.top();
             stack.pop();
             cout << curr->data << " ";
- 
+
             curr = curr->right;
         }
     }
 }
+
  
+
 int main()
 {
-    /* Construct the following tree
-               1
-             /   \
-            /     \
-           2       3
-          /      /   \
-         /      /     \
-        4      5       6
-              / \
-             /   \
-            7     8
-    */
- 
+
     Node* root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
-    root->left->left = new Node(4);
-    root->right->left = new Node(5);
-    root->right->right = new Node(6);
-    root->right->left->left = new Node(7);
-    root->right->left->right = new Node(8);
- 
+
+
+   //Height = 15
+    for (int x = 2; x <= 32767; x++){
+        insert(root,x);
+    }
+
+    /**
+    //Height = 10
+    for (int x = 2; x <= 1023; x++){
+        insert(root,x);
+    }
+    **/
+
+    /**
+    //Height = 5
+    for (int x = 2; x <= 31; x++){
+        insert(root,x);
+    }
+    **/
+
     inorderIterative(root);
- 
+
     return 0;
 }
+
