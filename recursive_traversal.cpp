@@ -49,9 +49,6 @@ void inorder(Node* root)
     // Traverse the left subtree
     inorder(root->left);
  
-    // Display the data part of the root (or current node)
-    cout << root->data << " ";
- 
     // Traverse the right subtree
     inorder(root->right);
 }
@@ -81,7 +78,7 @@ int main()
     }
     **/
     double time_start = getClock();
-    inorderIterative(root);
+    inorder(root);
     double time_finish = getClock();
 
     printf("time (s)= %.6f\n", time_finish - time_start);
