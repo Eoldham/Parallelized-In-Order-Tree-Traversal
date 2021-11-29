@@ -2,7 +2,11 @@
 
 #include <iostream>
 #include <stack>
+#include <time.h>
+#define getClock() ((double)clock() / CLOCKS_PER_SEC)
+
 using namespace std;
+
 
 // Data structure to store a binary tree node
 struct Node
@@ -38,6 +42,8 @@ Node* insert(Node* node, int data)
 // Iterative function to perform inorder traversal on the tree
 void inorderIterative(Node* root)
 {
+    double time_start = getClock();
+
     // create an empty stack
     stack<Node*> stack;
 
@@ -59,12 +65,17 @@ void inorderIterative(Node* root)
             // print it, and finally set the current node to its right child
             curr = stack.top();
             stack.pop();
-            cout << curr->data << " ";
+           // cout << curr->data << " ";
 
             curr = curr->right;
         }
     }
+
+    double time_finish = getClock();
+
+    printf("time (s)= %.6f\n", time_finish - time_start);
 }
+
 
  
 
