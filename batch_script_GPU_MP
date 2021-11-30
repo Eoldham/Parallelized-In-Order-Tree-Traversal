@@ -11,6 +11,5 @@
 
 #SBATCH -t 00:30:00             	    # set maximum run time of 30 minutes
 
-//Parallel
 nvc++ parallel_traversal.cpp -mp=multicore -Minfo=mp -o parallel
 ./parallel
