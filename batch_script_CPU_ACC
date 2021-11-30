@@ -11,5 +11,11 @@
 #SBATCH -t 00:30:00             	    # set maximum run time of 30 minutes
 
 export ACC_NUM_CORES=1               # sets number of cores used, not used in iterative/recursive running
+
+//Iterative
+nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative
 ./iterative
 
+//Recursive
+nvc++ -ta=multicore -Minfo=accel recursive_traversal.cpp -o recursive
+./recursive
