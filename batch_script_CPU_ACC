@@ -19,3 +19,7 @@ nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative
 //Recursive
 nvc++ -ta=multicore -Minfo=accel recursive_traversal.cpp -o recursive
 ./recursive
+
+//Parallel
+nvc++ -ta=multicore -Minfo=accel parallel_traversal.cpp -o parallel
+./parallel
