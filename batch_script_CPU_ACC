@@ -2,7 +2,7 @@
 #SBATCH -A see200002p      		        # specify the project or allocation number
 #SBATCH -p RM-shared 			            # RM-shared partition
 #SBATCH -J myjob                	    # Job name
-#SBATCH --mail-user=owlanne@udel.edu        # Insert Username here
+#SBATCH --mail-<username>       # Insert Username here
 #SBATCH --mail-type=ALL
 
 #SBATCH -N 1                    	    # Number of nodes, not cores (16 cores/node)
@@ -12,14 +12,5 @@
 
 export ACC_NUM_CORES=1               # sets number of cores used, not used in iterative/recursive running
 
-//Iterative
-nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative
-./iterative
-
-//Recursive
-nvc++ -ta=multicore -Minfo=accel recursive_traversal.cpp -o recursive
-./recursive
-
-//Parallel
-nvc++ -ta=multicore -Minfo=accel parallel_traversal.cpp -o parallel
-./parallel
+nvc++ -ta=multicore -Minfo=accel <inputfile> -o <outputfile>
+./<outputfile>
