@@ -11,14 +11,5 @@
 
 #SBATCH -t 00:30:00             	    # set maximum run time of 30 minutes
 
-//Iterative
-nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative
-./iterative
-
-//Recursive
-nvc++ -acc -gpu=cc70 -Minfo=accel recursive_traversal.cpp -o recursive
-./recursive 
-
-//Parallel
-nvc++ -acc -gpu=cc70 -Minfo=accel parallel_traversal.cpp -o parallel
-./parallel
+nvc++ -acc -gpu=cc70 -Minfo=accel <inputfile> -o <outputfile>
+./<outputfile>
