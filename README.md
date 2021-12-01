@@ -21,7 +21,7 @@ In this project we are looking into the inorder traversal algorithm. This algori
 - parallel_MP_traversal.cpp: c++ code to create and traverse a BST in parallel with OpenMP
 - recursive_traversal.cpp: c++ code to create and traverse a BST recursively
 
-## Data and corresponding slurm numbers:
+## Data and Corresponding Slurm Numbers:
 
 ### Data
 |                 | Iterative | Recursive |        Iterative       | Recursive |
@@ -39,5 +39,15 @@ In this project we are looking into the inorder traversal algorithm. This algori
 | Medium(10)      |  5282022  |  5281523  |         5282042        |  5281529  |
 | Large(15)       |  5282085  |  5281579  |         5282157        |  5281892  |
 
-## How to run yourself: 
+## Running:
+1. We ran this code using [bridges 2](https://www.psc.edu/resources/bridges-2/) we recommend you do the same
+2. Edit the batch_script files by entering: <Username>, <Inputfile> and <Outputfile> into the given spaces
+3. We compile in the batch scripts but you can also compile using the following lines: 
+  ` nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative`
+  ` nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative`
+  ` nvc++ parallel_traversal.cpp -mp=multicore -Minfo=mp -o parallel`
+4. Example of running the code:
+  `nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative
+   sbatch batch_script_GPU_ACC`
+
 
