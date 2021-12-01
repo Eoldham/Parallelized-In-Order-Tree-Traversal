@@ -1,3 +1,5 @@
+//file used in testing and running of OpenMP parallelization. Does not work correctly. Returns a slower time than non-parallelized
+
 //Code From: https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/
 
 #include <iostream>
