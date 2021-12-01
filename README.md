@@ -1,5 +1,6 @@
-# In-Order BST tree traversal: Recursive, Iterative, Parallelized <br> 
-## Emily Oldham, Andrew McCracken
+# In-Order BST tree traversal: Recursive, Iterative, Parallelized  
+## Authors: 
+Emily Oldham, Andrew McCracken
 
 ## Introduction: 
 In this project we are looking into the inorder traversal algorithm. This algorithm can be implemented both recursively and iteratively. We first want to compare the difference in time between recursive and iterative implementations. From there, we would like to parallelize the iterative/recursive code to find a way to improve the performance as well as compare the performance across different sized trees. 
@@ -11,6 +12,14 @@ In this project we are looking into the inorder traversal algorithm. This algori
 - Editor: Vi
 
 ## File Descriptions:
+- License: Basic Licensing for our parallelization.
+- batch_script_CPU_ACC: run this batch script to compile and run a program that traverses a BST using parallel OpenACC via CPU
+- batch_script_GPU_ACC: run this batch script to compile and run a program that traverses a BST using parallel OpenACC via GPU
+- batch_script_GPU_MP: run this batch script to compile and run a program that traverses a BST using parallel OpenMP via GPU
+- iterative_traversal.cpp: c++ code to create and traverse a BST iteratively
+- openACC.cpp: c++ code to create and traverse a BST parallely with OpenACC
+- parallel_MP_traversal.cpp: c++ code to create and traverse a BST in parallel with OpenMP
+- recursive_traversal.cpp: c++ code to create and traverse a BST recursively
 
 ## Data and corresponding slurm numbers:
 
