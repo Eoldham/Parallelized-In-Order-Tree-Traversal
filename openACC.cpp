@@ -1,3 +1,5 @@
+//file used in testing and running of OpenACC parallelization. Does not work.
+
 //Code From: https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/
 
 #include <iostream>
@@ -50,6 +52,7 @@ void inorderIterative(Node* root)
     Node* curr = root;
     
     // if the current node is null and the stack is also empty, we are done
+    #pragma acc parallel loop
     for(curr; !stack.empty()||curr != nullptr; curr){
         // if the current node exists, push it into the stack (defer it)
         // and move to its left child
