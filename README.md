@@ -1,5 +1,4 @@
-# Parallelized-In-Order-Tree-Traversal
-### Emily Oldham, Andrew McCracken
+# In-Order BST tree traversal: Recursive, Iterative, Parallelized <br> Emily Oldham, Andrew McCracken
 
 ## Introduction: 
 In this project we are looking into the inorder traversal algorithm. This algorithm can be implemented both recursively and iteratively. We first want to compare the difference in time between recursive and iterative implementations. From there, we would like to parallelize the iterative/recursive code to find a way to improve the performance as well as compare the performance across different sized trees. 
