@@ -47,8 +47,8 @@ In this project we are looking into the inorder traversal algorithm. This algori
   ` nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative`  <br>
   ` nvc++ parallel_traversal.cpp -mp=multicore -Minfo=mp -o parallel`  <br>
 4. Example of running the code:  <br>
-  `nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative <br>
-   sbatch batch_script_GPU_ACC`
+  `nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative` <br>
+  `sbatch batch_script_GPU_ACC`
   
 ## Resources:
 ### Code From:
