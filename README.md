@@ -1,5 +1,5 @@
-# Parallelized-In-Order-Tree-Traversal <br>
-## Emily Oldham, Andrew McCracken
+# Parallelized-In-Order-Tree-Traversal
+### Emily Oldham, Andrew McCracken
 
 ## Introduction: 
 In this project we are looking into the inorder traversal algorithm. This algorithm can be implemented both recursively and iteratively. We first want to compare the difference in time between recursive and iterative implementations. From there, we would like to parallelize the iterative/recursive code to find a way to improve the performance as well as compare the performance across different sized trees. 
@@ -13,6 +13,7 @@ In this project we are looking into the inorder traversal algorithm. This algori
 ## File Descriptions:
 
 ## Data and corresponding slurm numbers:
+
 ### Data
 |                 | Iterative | Recursive |        Iterative       | Recursive |
 |-----------------|:---------:|:---------:|:----------------------:|:---------:|
@@ -20,6 +21,7 @@ In this project we are looking into the inorder traversal algorithm. This algori
 | Small(5)        |  .000066  |  0.000084 |         .000066        |  .000056  |
 | Medium(10)      |  .000121  |  .000156  |         .000170        |  .000126  |
 | Large(15)       |  .002423  |  .002392  |         .003314        |  .002934  |
+
 ### Slurm Numbers
 |                 | Iterative | Recursive |        Iterative       | Recursive |
 |-----------------|:---------:|:---------:|:----------------------:|:---------:|
