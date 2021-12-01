@@ -42,12 +42,23 @@ In this project we are looking into the inorder traversal algorithm. This algori
 ## Running:
 1. We ran this code using [bridges 2](https://www.psc.edu/resources/bridges-2/) we recommend you do the same
 2. Edit the batch_script files by entering: <Username>, <Inputfile> and <Outputfile> into the given spaces
-3. We compile in the batch scripts but you can also compile using the following lines: 
-  ` nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative`
-  ` nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative`
-  ` nvc++ parallel_traversal.cpp -mp=multicore -Minfo=mp -o parallel`
-4. Example of running the code:
-  `nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative
+3. We compile in the batch scripts but you can also compile using the following lines: <br>
+  ` nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative`  <br>
+  ` nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative`  <br>
+  ` nvc++ parallel_traversal.cpp -mp=multicore -Minfo=mp -o parallel`  <br>
+4. Example of running the code:  <br>
+  `nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative <br>
    sbatch batch_script_GPU_ACC`
+  
+## Resources:
+### Code From:
+- https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/
+- https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/ 
+### Literature:
+- OpenMP Tasks: http://web.engr.oregonstate.edu/~mjb/cs575/Handouts/tasks.1pp.pdf
+- Ray tracing: https://developer.nvidia.com/blog/thinking-parallel-part-ii-tree-traversal-gpu/
+- C# Tasks: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks
+- Breadth-first and Depth-first:  https://link.springer.com/content/pdf/10.1007%2F3-540-53504-7_97.pdf 
+
 
 
