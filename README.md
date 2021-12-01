@@ -41,7 +41,7 @@ In this project we are looking into the inorder traversal algorithm. This algori
 
 ## Running:
 1. We ran this code using [bridges 2](https://www.psc.edu/resources/bridges-2/) we recommend you do the same
-2. Edit the batch_script files by entering: <Username>, <Inputfile> and <Outputfile> into the given spaces
+2. Edit the batch_script files by entering: Username, Inputfile and Outputfile into the given spaces
 3. We compile in the batch scripts but you can also compile using the following lines: <br>
   ` nvc++ -acc -gpu=cc70 -Minfo=accel iterative_traversal.cpp -o iterative`  <br>
   ` nvc++ -ta=multicore -Minfo=accel iterative_traversal.cpp -o iterative`  <br>
